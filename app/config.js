@@ -14,6 +14,7 @@ require.config({
     jquery: "../assets/js/libs/jquery",
     lodash: "../assets/js/libs/lodash",
     backbone: "../assets/js/libs/backbone",
+    mustache: "../assets/js/libs/mustache",
     gh3: "../assets/js/libs/gh3"
   },
 
