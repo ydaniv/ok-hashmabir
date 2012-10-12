@@ -47,7 +47,7 @@ function($, _, Backbone, Mustache) {
 
         // Seek out the template asynchronously.
         return $.ajax({ url: app.root + path }).then(function(contents) {
-          done(JST[path] = _.template(contents));
+          done(JST[path] = Mustache.compile(contents));
         });
       }
     }
