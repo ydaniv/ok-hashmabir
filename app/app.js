@@ -3,12 +3,13 @@ define([
   "jquery",
   "lodash",
   "backbone",
+  "mustache",
 
   // Plugins.
   "plugins/backbone.layoutmanager"
 ],
 
-function($, _, Backbone) {
+function($, _, Backbone, Mustache) {
 
   // Provide a global location to place configuration settings and module
   // creation.
