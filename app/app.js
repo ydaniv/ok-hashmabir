@@ -3,12 +3,14 @@ define([
   "jquery",
   "lodash",
   "backbone",
+  "mustache",
   "gh3",
+
   // Plugins.
   "plugins/backbone.layoutmanager"
 ],
 
-function($, _, Backbone) {
+function($, _, Backbone, Mustache, Gh3) {
 
   // Provide a global location to place configuration settings and module
   // creation.
@@ -46,7 +48,7 @@ function($, _, Backbone) {
 
         // Seek out the template asynchronously.
         return $.ajax({ url: app.root + path }).then(function(contents) {
-          done(JST[path] = _.template(contents));
+          done(JST[path] = Mustache.compile(contents));
         });
       }
     }
